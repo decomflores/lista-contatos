@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Categoria } from '../../models/Contato';
 
 type FiltroState = {
-  termo?: string; // Para uma futura barra de busca
+  termo?: string;
   criterio: 'categoria' | 'todos';
   valor?: Categoria;
 };
