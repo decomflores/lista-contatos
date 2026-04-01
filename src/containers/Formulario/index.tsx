@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { RootState } from '../../store';
-import Contato, { Categoria } from '../../models/Contato'; // Importamos Categoria também
+import Contato, { Categoria } from '../../models/Contato';
 import { adicionar } from '../../store/reducers/contatos';
 import * as S from './styles';
 
@@ -16,7 +16,6 @@ const Formulario = () => {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [telefone, setTelefone] = useState('');
-  // Definimos 'pessoal' como categoria padrão inicial
   const [categoria, setCategoria] = useState(Categoria.PESSOAL);
 
   const cadastrarContato = (evento: FormEvent) => {
@@ -25,7 +24,6 @@ const Formulario = () => {
     const ultimoContato = itens[itens.length - 1];
     const novoId = ultimoContato ? ultimoContato.id + 1 : 1;
 
-    // Agora passamos a categoria para a instância da classe
     const contatoParaAdicionar = new Contato(
       nome,
       email,
@@ -63,7 +61,7 @@ const Formulario = () => {
         required
       />
 
-      {/* Novo campo de seleção de categoria */}
+      {}
       <label htmlFor="categoria">Categoria</label>
       <S.Campo
         as="select"

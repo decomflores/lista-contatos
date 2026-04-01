@@ -37,7 +37,7 @@ const Contato = ({
 
   return (
     <S.Card>
-      {/* Exibe a Tag colorida baseada na categoria original ou na nova selecionada */}
+      {}
       <S.Tag categoria={estaEditando ? categoria : categoriaOriginal}>
         {estaEditando ? `Editando: ${categoria}` : categoriaOriginal}
       </S.Tag>
